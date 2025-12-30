@@ -1,0 +1,128 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #e0e0e0;
+    --bg: #000000;
+    --card-bg: #1a1a1a;
+    --text: #ffffff;
+    --success: #00b894;
+    --error: #d63031;
+    --shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.game-area {
+    display: flex;
+    gap: 10px;
+    margin: 1.5rem 0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+#message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    min-height: 1.5em; /* Prevents layout shift */
+}
+
+.history {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+#guess-history {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #333333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+/* Utility Classes */
+.hidden { display: none; }
+.shake { animation: shake 0.5s; }
+
+/* Dynamic Colors */
+.text-success { color: var(--success); }
+.text-error { color: var(--error); }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -2px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(-3px, 1px); }
+    70% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    100% { transform: translate(0, 0); }
+}
