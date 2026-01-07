@@ -109,3 +109,6 @@ restartBtn.addEventListener('click', initGame);
 
 // Start the game on load
 initGame();
+
+
+// will improve the js file soon 
